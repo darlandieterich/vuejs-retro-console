@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <RetroConsole output="blash main consolO"/>
+    <RetroConsole :output="['blash', 'main', 'consolO']"/>
   </div>
 </template>
 
