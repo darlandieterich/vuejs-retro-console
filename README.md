@@ -1,4 +1,5 @@
-# vuejs-retro-console
+# VueJs Retro Console
+Simple output console component for VueJs with classic limegreen color.
 
 ## Project setup
 ```
@@ -20,5 +21,3 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
