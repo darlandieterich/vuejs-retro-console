@@ -25,6 +25,6 @@ export default {
   font-weight: bold;
   line-height: 1.1;
   font-size: 10vh;
-  text-shadow: 0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 6px limegreen;
 }
 </style>
