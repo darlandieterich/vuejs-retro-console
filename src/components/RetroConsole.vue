@@ -12,6 +12,17 @@ export default {
     fontSize: {
       type: Number,
       default: 12
+    },
+    consoleSize: {
+      type: Object,
+      default: () => ({
+        height: '150px',
+        width: '100%'
+      })
+    },
+    fullscreen: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -26,5 +37,8 @@ export default {
   line-height: 1.1;
   font-size: 10vh;
   text-shadow: 0px 0px 6px limegreen;
+}
+.fullscreen {
+  height: 100vh;
 }
 </style>
