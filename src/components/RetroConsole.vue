@@ -1,5 +1,5 @@
 <template>
-  <div class="retro-console">
+  <div :class="`retro-console ${fullscreen ? 'fullscreen' : ''}`">
     <p v-for="o in output" v-bind:key="o" >{{o}}</p>
   </div>
 </template>
@@ -24,6 +24,11 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  data () {
+    return {
+      color: 'red' 
+    }
   }
 }
 </script>
@@ -40,5 +45,6 @@ export default {
 }
 .fullscreen {
   height: 100vh;
+  width: 100%;
 }
 </style>
