@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <RetroConsole :output="['blash', 'main', 'consolO']" :fullscreen="true" :fontSize="25"/>
+    <RetroConsole :output="['blash', 'main', 'consolO']" :fullscreen="false" :fontSize="25"/>
   </div>
 </template>
 

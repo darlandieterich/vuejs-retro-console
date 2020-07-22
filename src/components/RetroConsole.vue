@@ -1,5 +1,6 @@
 <template>
-  <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`font-size:${fontSize}px`">
+  <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`${getStyle} font-size:${fontSize}px`">
+    {{getStyle}}
     <div v-for="o in output" v-bind:key="o" >{{o}}</div>
   </div>
 </template>
@@ -16,8 +17,8 @@ export default {
     consoleSize: {
       type: Object,
       default: () => ({
-        height: '150px',
-        width: '100%'
+        height: '250px',
+        width: '50%'
       })
     },
     fullscreen: {
@@ -32,7 +33,9 @@ export default {
   },
   computed: {
     getStyle: function () {
-      return Object.entries(this.consoleSize)
+      return Object.entries(this.consoleSize).map(function (key) {
+        return `${key[0]}:${key[1]}`
+      }).join(";")+";"
     }
   }
 }
@@ -51,6 +54,6 @@ export default {
 .fullscreen {
   position: absolute;
   height: 100vh;
-  width: 100%;
+  
 }
 </style>
