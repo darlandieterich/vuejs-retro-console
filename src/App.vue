@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <RetroConsole :output="['blash', 'main', 'consolO']" :fullscreen="true"/>
+    <RetroConsole :output="['blash', 'main', 'consolO']" :fullscreen="true" :fontSize="25"/>
   </div>
 </template>
 
@@ -16,4 +16,8 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0px;
+  padding: 0px;
+}
 </style>

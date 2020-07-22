@@ -1,6 +1,6 @@
 <template>
-  <div :class="`retro-console ${fullscreen ? 'fullscreen' : ''}`">
-    <p v-for="o in output" v-bind:key="o" >{{o}}</p>
+  <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`font-size:${fontSize}px`">
+    <div v-for="o in output" v-bind:key="o" >{{o}}</div>
   </div>
 </template>
 
@@ -29,21 +29,27 @@ export default {
     return {
       color: 'red' 
     }
+  },
+  computed: {
+    getStyle: function () {
+      return Object.entries(this.consoleSize)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.retro-console {
+.retro-console {  
   color: limegreen;
   background-color: black;
   font-family: monospace;
   font-weight: bold;
   line-height: 1.1;
-  font-size: 10vh;
+  font-size: 20px;
   text-shadow: 0px 0px 6px limegreen;
 }
 .fullscreen {
+  position: absolute;
   height: 100vh;
   width: 100%;
 }
