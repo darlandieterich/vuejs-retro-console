@@ -1,11 +1,11 @@
 <template>
-  <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`${getStyle} font-size:${fontSize}px`">
-    {{getStyle}}
-    <div v-for="o in output" v-bind:key="o" >{{o}}</div>
+  <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`font-size:${fontSize}px; ${getStyle}`">
+    <div v-for="(o, idx) in output" v-bind:key="o+idx" >{{o}}</div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'RetroConsole',
   props: {
@@ -32,10 +32,10 @@ export default {
     }
   },
   computed: {
-    getStyle: function () {
+    getStyle: function () {      
       return Object.entries(this.consoleSize).map(function (key) {
         return `${key[0]}:${key[1]}`
-      }).join(";")+";"
+      }).join(";")
     }
   }
 }
@@ -43,6 +43,9 @@ export default {
 
 <style lang="scss" scoped>
 .retro-console {  
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   color: limegreen;
   background-color: black;
   font-family: monospace;
@@ -50,10 +53,12 @@ export default {
   line-height: 1.1;
   font-size: 20px;
   text-shadow: 0px 0px 6px limegreen;
+  border: 1px;
+  border-style: solid;
+  border-color: limegreen;
 }
 .fullscreen {
   position: absolute;
-  height: 100vh;
-  
+  height: 100vh;  
 }
 </style>

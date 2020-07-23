@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <RetroConsole :output="['blash', 'main', 'consolO']" :fullscreen="false" :fontSize="25"/>
+    <input type="text" ref="fieldx" v-model="value" v-on:keyup.enter="insere">
+    <RetroConsole :output="lines" :fullscreen="false" :fontSize="15" :consoleSize="{height:'400px',width:'50%'}"/>
   </div>
 </template>
 
@@ -11,6 +12,18 @@ export default {
   name: 'App',
   components: {
     RetroConsole
+  },
+  data () {
+    return {
+      lines: ['one', 'two', 'three'],
+      value: ''
+    }
+  },
+  methods: {
+    insere () {
+      this.lines.push(this.value)
+      this.value = ''
+    }
   }
 }
 </script>
