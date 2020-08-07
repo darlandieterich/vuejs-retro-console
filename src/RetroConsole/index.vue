@@ -1,6 +1,7 @@
 <template>
   <div class="retro-console" v-bind:class="{fullscreen: fullscreen}" :style="`font-size:${fontSize}px; ${getStyle}`">
     <div v-for="(o, idx) in output" v-bind:key="o+idx" >{{o}}</div>
+    <slot></slot>
   </div>
 </template>
 
