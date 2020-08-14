@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>Example</h2>    
     <input type="text" ref="fieldx" v-model="value" v-on:keyup.enter="insere">
     <RetroConsole :output="lines" :fullscreen="false" :fontSize="15" :consoleSize="{height:'100px',width:'50%'}"/>
   </div>
