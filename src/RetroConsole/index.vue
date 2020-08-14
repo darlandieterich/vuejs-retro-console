@@ -57,6 +57,7 @@ export default {
   border: 1px;
   border-style: solid;
   border-color: limegreen;
+  padding: 0.25em;
 }
 .fullscreen {
   position: absolute;
