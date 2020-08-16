@@ -4,7 +4,6 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
 
 export default {
@@ -15,7 +14,7 @@ export default {
       type: Number,
       default: 12
     },
-    consoleSize: {
+    styles: {
       type: Object,
       default: () => ({
         height: '250px',
@@ -34,7 +33,7 @@ export default {
   },
   computed: {
     getStyle: function () {      
-      return Object.entries(this.consoleSize).map(function (key) {
+      return Object.entries(this.styles).map(function (key) {
         return `${key[0]}:${key[1]}`
       }).join(";")
     }
