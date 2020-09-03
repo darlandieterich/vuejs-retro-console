@@ -26,11 +26,6 @@ export default {
       default: false
     }
   },
-  /* data () {
-    return {
-      example: 'red' 
-    }
-  }, */
   computed: {
     getStyle: function () {      
       return Object.entries(this.styles).map(function (key) {
