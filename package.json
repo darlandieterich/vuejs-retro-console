@@ -1,11 +1,22 @@
 {
   "name": "vuejs-retro-console",
-  "version": "0.1.1",
+  "description": "VueJs Retro Console with classic lime green",
+  "version": "0.1.2",
+  "author": "Darlan D. <darlandieterich@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "console",
+    "vue",
+    "retro",
+    "lime"
+  ],
+  "main": "index.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vuejsretroconsole ./src/RetroConsole/index.vue",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "publish": "npm publish"
   },
   "dependencies": {
     "core-js": "^3.6.5",
