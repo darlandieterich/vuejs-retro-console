@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h2>Example</h2>    
+    <h2>Example</h2>
     <input type="text" v-model="value" v-on:keyup.enter="insere">
-    <RetroConsole :output="lines" :fullscreen="false" :fontSize="15" :consoleSize="{height:'100px',width:'50%'}"/>
+    <RetroConsole :output="lines" :fullscreen="false" :fontSize="17" :styles="{'padding-left': '20px'}"/>
   </div>
 </template>
 

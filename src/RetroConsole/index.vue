@@ -16,10 +16,7 @@ export default {
     },
     styles: {
       type: Object,
-      default: () => ({
-        height: '250px',
-        width: '50%'
-      })
+      default: () => ({})
     },
     fullscreen: {
       type: Boolean,
@@ -27,7 +24,7 @@ export default {
     }
   },
   computed: {
-    getStyle: function () {      
+    getStyle: function () {
       return Object.entries(this.styles).map(function (key) {
         return `${key[0]}:${key[1]}`
       }).join(";")
@@ -37,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.retro-console {  
+.retro-console {
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
@@ -54,7 +51,12 @@ export default {
   padding: 0.25em;
 }
 .fullscreen {
-  position: absolute;
-  height: 100vh;  
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
 }
 </style>
